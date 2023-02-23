@@ -1,0 +1,12 @@
+SELECT
+	person.name AS PERSON_NAME1,
+	PPERSON.name AS PERSON_NAME2,
+	person.address AS COMMON_ADDRESS
+FROM
+	person
+INNER JOIN person AS PPERSON
+	ON PPERSON.address = person.address AND person.name < PPERSON.name
+ORDER BY
+	PERSON_NAME1,
+	PERSON_NAME2,
+	COMMON_ADDRESS

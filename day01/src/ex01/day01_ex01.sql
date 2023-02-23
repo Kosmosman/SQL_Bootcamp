@@ -1,0 +1,13 @@
+SELECT
+	pizza_name AS OBJECT_NAME
+FROM
+	menu
+
+UNION ALL
+
+SELECT
+	name
+FROM
+	person
+ORDER BY
+	OBJECT_NAME

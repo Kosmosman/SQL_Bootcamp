@@ -1,0 +1,14 @@
+(SELECT
+	generated_date AS MISSING_DATE
+FROM
+	V_GENERATED_DATES)
+
+EXCEPT
+
+(SELECT
+	DISTINCT visit_date
+FROM
+	person_visits)
+	
+ORDER BY
+	MISSING_DATE
